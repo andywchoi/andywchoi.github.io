@@ -10,28 +10,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Task Manager",
+    title: "PlanIt",
     description:
-      "A focused task tracking app with filters, persistent state, and a responsive interface.",
-    tech: ["Astro", "TypeScript", "CSS"],
-    github: "https://github.com/your-username/task-manager",
-    demo: "https://your-username.github.io/task-manager",
+      "AI-powered travel assistant that automates itinerary planning using Amadeus API for real-time flights, hotels, and restaurants, serving 500+ users.",
+    tech: ["Amadeus", "AWS Bedrock", "React"],
+    github: "https://github.com/Geoffrey0953/IrvineHacks",
+    demo: "https://devpost.com/software/planit-n7is89",
     featured: true,
   },
   {
-    title: "Data Dashboard",
+    title: "DineSafe",
     description:
-      "A compact analytics dashboard that turns project data into readable charts and summaries.",
-    tech: ["React", "Chart.js", "Node.js"],
-    github: "https://github.com/your-username/data-dashboard",
+      "Platform that identifies recently closed or failed inspection restaurants by web scraping government sites.",
+    tech: ["MongoDB", "Express", "React", "Node.js"],
+    github: "https://github.com/Geoffrey0953/Web-Jam-Hackathon",
+    demo: "https://dinesafe.vercel.app/",
     featured: true,
   },
-  {
-    title: "Portfolio Website",
-    description:
-      "This site: a fast, maintainable portfolio built with Astro and deployed through GitHub Pages.",
-    tech: ["Astro", "GitHub Pages", "GitHub Actions"],
-    github: "https://github.com/your-username/portfolio",
-    featured: true,
-  },
+  // {
+  //   title: "Portfolio Website",
+  //   description:
+  //     "This site: a fast, maintainable portfolio built with Astro and deployed through GitHub Pages.",
+  //   tech: ["Astro", "GitHub Pages", "GitHub Actions"],
+  //   github: "https://github.com/your-username/portfolio",
+  //   featured: true,
+  // },
 ];
