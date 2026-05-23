@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+
+const featuredProjects = projects.filter((project) => project.featured);
+const skills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "Git",
+  "GitHub Pages",
+];
+---
+
+<BaseLayout
+  title="Andy Choi | Portfolio"
+  description="A portfolio of software projects, experiments, and practical web tools."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <img
+        class="profile-photo"
+        src="/profile.jpg"
+        alt="Andy Choi"
+      />
+      <h2>Hi, I'm Andy Choi!</h2>
+      <p class="intro">
+        I build practical web tools, clean interfaces, and project-driven software with a focus on usability and maintainability.
+      </p>
+    </div>
+    <!-- 
+      <div class="hero-panel" aria-label="Portfolio highlights">
+        <span>Fast static site</span>
+        <strong>{featuredProjects.length}</strong>
+        <span>featured projects</span>
+      </div>
+    -->
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Projects</h2>
+    </div>
+    <div class="project-grid">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+  <!-- 
+    <section id="skills" class="section split">
+      <div class="section-heading">
+        <p class="eyebrow">Toolkit</p>
+        <h2>Skills</h2>
+      </div>
+      <ul class="skill-list">
+        {skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    </section>
+  -->
+
+  <section id="about" class="section split">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2>A little context</h2>
+    </div>
+    <div class="text-block">
+      <p>
+        I'm passionate about building software that starts with a real problem and turns into something people can actually use.
+      </p>
+      <p>
+        I’m treating this portfolio as something that grows with me as I keep learning and building.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's connect!</h2>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:andychoi1216@gmail.com">Email</a>
+      <a href="https://github.com/andywchoi">GitHub</a>
+      <a href="https://www.linkedin.com/in/andy-choi-2b503a27b">LinkedIn</a>
+    </div>
+  </section>
+</BaseLayout>
